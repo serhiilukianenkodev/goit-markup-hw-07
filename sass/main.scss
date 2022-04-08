@@ -1,51 +1,11 @@
-:root {
-    --text-main: #757575;
-    --text-accent: #2196f3;
-    --text-heading: #212121;
-    --text-white: #ffffff;
+@import './utils/variables';
+@import './base/normalize';
+@import './base/preset';
+@import './utils/list';
+@import './utils/visually-hidden';
 
-    --bg-main: #ffffff;
-    --bg-section: #2f303a;
-    --bg-accent: #f5f4fa;
+@import './components/container';
 
-    --card-set-gap: 30px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    font-family: Roboto;
-}
-
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.list {
-    list-style: none;
-}
 
 .link {
     text-decoration: none;
@@ -56,7 +16,7 @@ body {
 
 .link:hover,
 .link:focus {
-    color: var(--text-accent);
+    color: $text-accent;
 }
 
 /* header */
@@ -90,7 +50,7 @@ header {
 }
 
 .logo-accent {
-    color: var(--text-accent);
+    color: $text-accent;
 }
 
 .contacts,
@@ -126,7 +86,7 @@ header {
 }
 
 .site-nav {
-    color: var(--text-heading);
+    color: $text-heading;
     margin: 0;
     padding: 0;
 }
@@ -137,7 +97,7 @@ header {
 
 .site-nav .is-active-page {
     position: relative;
-    color: var(--text-accent);
+    color: $text-accent;
 }
 
 .site-nav .is-active-page::after {
@@ -148,7 +108,7 @@ header {
     display: block;
     height: 4px;
     width: 100%;
-    background-color: var(--text-accent);
+    background-color: $text-accent;
     border-radius: 2px;
 }
 
@@ -189,7 +149,7 @@ header {
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    color: var(--text-white);
+    color: $text-white;
     text-transform: uppercase;
 }
 
@@ -201,8 +161,8 @@ header {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    color: var(--text-white);
-    background: var(--text-accent);
+    color: $text-white;
+    background: $text-accent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
@@ -226,7 +186,7 @@ header {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--text-heading);
+    color: $text-heading;
     margin-bottom: 10px;
 }
 
@@ -247,18 +207,18 @@ header {
     justify-content: center;
     align-items: center;
 
-    background: var(--bg-accent);
+    background: $bg-accent;
     border-radius: 4px;
     width: 270px;
     height: 120px;
 }
 
 .benefits-list>li {
-    width: calc((100% - var(--card-set-gap) * 3) / 4);
+    width: calc((100% - #{$card-set-gap} * 3) / 4);
 }
 
 .benefits-list>li:not(:last-child) {
-    margin-right: var(--card-set-gap);
+    margin-right: $card-set-gap;
 }
 
 /* work-section */
@@ -270,7 +230,7 @@ header {
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--text-heading);
+    color: $text-heading;
 }
 
 .work-list {
@@ -278,7 +238,7 @@ header {
 }
 
 .work-list>li:not(:last-child) {
-    margin-right: var(--card-set-gap);
+    margin-right: $card-set-gap;
 }
 
 .work-list .thumb {
@@ -304,12 +264,12 @@ header {
 
 /* team-section */
 .team-section {
-    background: var(--bg-accent);
+    background: $bg-accent;
 }
 
 .card {
     width: 270px;
-    background: var(--bg-main);
+    background: $bg-main;
     text-align: center;
     font-size: 16px;
     line-height: 1.19;
@@ -322,11 +282,11 @@ header {
 }
 
 .team-section .card-description {
-    padding: var(--card-set-gap);
+    padding: $card-set-gap;
 }
 
 .team-section h3 {
-    color: var(--text-heading);
+    color: $text-heading;
     font-weight: 500;
     font-size: inherit;
 
@@ -342,7 +302,7 @@ header {
 }
 
 .team-list>.card:not(:last-child) {
-    margin-right: var(--card-set-gap);
+    margin-right: $card-set-gap;
 }
 
 .social-icons {
@@ -370,8 +330,8 @@ header {
 
 .social-icons a:hover,
 .social-icons a:focus {
-    background-color: var(--text-accent);
-    color: var(--bg-accent);
+    background-color: $text-accent;
+    color: $bg-accent;
 }
 
 .social-icons .icon {
@@ -408,18 +368,18 @@ header {
 
 .clients-list a:hover,
 .clients-list a:focus {
-    color: var(--text-accent);
+    color: $text-accent;
 }
 
 /* footer */
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
-    background: var(--bg-section);
+    background: $bg-section;
 }
 
 .footer .logo {
-    color: var(--text-white);
+    color: $text-white;
     display: inline-block;
     margin-bottom: 20px;
 }
@@ -438,7 +398,7 @@ header {
 }
 
 .address p {
-    color: var(--text-white);
+    color: $text-white;
 }
 
 .contact-us h2 {
@@ -463,7 +423,7 @@ header {
 }
 
 .contact-us a {
-    color: var(--text-white);
+    color: $text-white;
     background: rgba(255, 255, 255, 0.1);
 
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -471,7 +431,7 @@ header {
 
 .contact-us a:hover,
 .contact-us a:focus {
-    background: var(--text-accent);
+    background: $text-accent;
 }
 
 .contact-us {
@@ -542,7 +502,7 @@ header {
 /*  portfolio*/
 .portfolio {
     font-family: Roboto;
-    background: var(--bg-main);
+    background: $bg-main;
 }
 
 .portfolio-selection {
@@ -562,8 +522,8 @@ header {
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--text-heading);
-    background: var(--bg-accent);
+    color: $text-heading;
+    background: $bg-accent;
     border-radius: 4px;
     border: none;
 
@@ -574,8 +534,8 @@ header {
 
 .portfolio-selection .btn:hover,
 .portfolio-selection .btn:focus {
-    color: var(--text-white);
-    background: var(--text-accent);
+    color: $text-white;
+    background: $text-accent;
 
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -586,14 +546,14 @@ header {
 .portfolio-projects {
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1 * var(--card-set-gap));
-    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * #{$card-set-gap});
+    margin-left: calc(-1 * #{$card-set-gap});
 }
 
 .portfolio-projects>.item {
-    flex-basis: calc((100%- 2 * var(--card-set-gap)) / 3);
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap);
+    flex-basis: calc((100%- 2 * #{$card-set-gap}) / 3);
+    margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
 }
 
 .portfolio-projects a {
@@ -623,14 +583,14 @@ header {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--text-heading);
+    color: $text-heading;
 }
 
 .portfolio-projects p {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-    color: var(--text-main);
+    color: $text-main;
     margin: 0;
 }
 
@@ -725,7 +685,7 @@ header {
 
 .close-btn:focus svg,
 .close-btn:hover svg {
-    color: var(--text-accent);
+    color: $text-accent;
 }
 
 
@@ -738,7 +698,7 @@ header {
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: var(--text-heading);
+    color: $text-heading;
 
 }
 
@@ -760,7 +720,7 @@ header {
 
 
 .form-input:focus {
-    border: 1px solid var(--text-accent);
+    border: 1px solid $text-accent;
     outline: none;
 }
 
@@ -769,7 +729,7 @@ header {
 }
 
 .form-input:focus-within~.form-icon {
-    fill: var(--text-accent);
+    fill: $text-accent;
 }
 
 .formfield {
@@ -870,20 +830,4 @@ textarea {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-
-/* Visually hidden */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
 }
