@@ -7,17 +7,7 @@
 @import './components/container';
 
 
-.link {
-    text-decoration: none;
-    color: inherit;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link:hover,
-.link:focus {
-    color: $text-accent;
-}
 
 /* header */
 header {
