@@ -294,6 +294,18 @@ body {
   color: #2196f3;
 }
 
+.flex-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -316,12 +328,26 @@ body {
   margin-right: auto;
 }
 
-/* header */
-header {
-  border-bottom: 1px solid #ececec;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 
 .header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,7 +359,7 @@ header {
           justify-content: space-between;
 }
 
-.main-nav {
+.header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,26 +368,8 @@ header {
           align-items: center;
 }
 
-.logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: #000000;
-  text-decoration: none;
-}
-
-.main-nav .logo {
-  margin-right: 93px;
-}
-
-.logo-accent {
-  color: #2196f3;
-}
-
-.contacts,
-.site-nav {
+.header__contacts,
+.header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,22 +385,22 @@ header {
   letter-spacing: 0.02em;
 }
 
-.site-nav a {
+.header__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
 }
 
-.contacts > li:not(:last-child) {
+.header__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts .icon {
+.header__icon {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.contacts a {
+.header__contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,22 +409,22 @@ header {
           align-items: center;
 }
 
-.site-nav {
+.header__menu {
   color: #212121;
   margin: 0;
   padding: 0;
 }
 
-.site-nav > li:not(:last-child) {
+.header__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav .is-active-page {
+.header__link--active-page {
   position: relative;
   color: #2196f3;
 }
 
-.site-nav .is-active-page::after {
+.header__link--active-page::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -427,41 +435,22 @@ header {
   border-radius: 2px;
 }
 
-/* main */
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-decoration: none;
 }
 
-/* sectin-order */
-.sectin-order {
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/banner.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.logo--header {
+  margin-right: 93px;
 }
 
-.sectin-order h1 {
-  margin-bottom: 30px;
-  max-width: 700px;
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  text-transform: uppercase;
+.logo__accent {
+  color: #2196f3;
 }
 
 .button {
@@ -482,17 +471,45 @@ header {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover,
-.button:focus {
+.button:hover, .button:focus {
   background: #188ce8;
 }
 
-/* benefits-section */
-.benefits-section.section {
+.hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/banner.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__heading {
+  margin-bottom: 30px;
+  max-width: 700px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.benefits-section {
   padding-bottom: 0;
 }
 
-.benefits-section h3 {
+.benefits-section__about {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -502,13 +519,13 @@ header {
   margin-bottom: 10px;
 }
 
-.benefits-section p {
+.benefits-section__description {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.benefits-list {
+.benefits-section__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,57 +534,37 @@ header {
           justify-content: space-between;
 }
 
-.benefits-list .thumb {
+.benefits-section__thumb {
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #f5f4fa;
   border-radius: 4px;
   width: 270px;
   height: 120px;
 }
 
-.benefits-list > li {
+.benefits-section__item {
   width: calc((100% - 30px * 3) / 4);
 }
 
-.benefits-list > li:not(:last-child) {
+.benefits-section__item:not(:last-child) {
   margin-right: 30px;
 }
 
-/* work-section */
-.section-heading {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.work-list {
+.work-section__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.work-list > li:not(:last-child) {
+.work-section__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work-list .thumb {
+.work-section__thumb {
   position: relative;
 }
 
-.work-list .description {
+.work-section__description {
   position: absolute;
   text-align: center;
   padding: 27px;

@@ -13,40 +13,38 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
- -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- header -->
-    <header>
-      <div class="container header">
-        <nav class="main-nav">
-          <a class="logo" href="./index.html"><span class="logo-accent">Web</span>Studio</a>
-          <ul class="site-nav list">
-            <li><a class="link is-active-page" href="./index.html">Студия</a></li>
-            <li><a class="link" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="link" href="">Контакты</a></li>
+    <header class="header">
+      <div class="container header__content">
+        <nav class="header__nav">
+          <a class="logo logo--header" href="./index.html"
+            ><span class="logo__accent">Web</span>Studio</a
+          >
+          <ul class="header__menu list">
+            <li class="header__item">
+              <a class="header__link link header__link--active-page" href="./index.html">Студия</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="header__item"><a class="header__link link" href="">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="contacts list">
-          <li>
-            <a class="link" href="mailto:info@devstudio.com">
-              <svg class="icon" width="16" height="12">
+        <ul class="header__contacts list">
+          <li class="header__item">
+            <a class="header__contact link" href="mailto:info@devstudio.com">
+              <svg class="header__icon" width="16" height="12">
                 <use href="./images/sprite.svg#pics-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li>
-            <a class="link" href="tel:+380961111111">
-              <svg class="icon" width="10" height="16">
+          <li class="header__item">
+            <a class="header__contact link" href="tel:+380961111111">
+              <svg class="header__icon" width="10" height="16">
                 <use href="./images/sprite.svg#pics-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -58,9 +56,9 @@
 
     <main>
       <!-- order service section -->
-      <section class="sectin-order">
+      <section class="sectin-order hero">
         <div class="container">
-          <h1>Эффективные решения для вашего бизнеса</h1>
+          <h1 class="hero__heading">Эффективные решения для вашего бизнеса</h1>
           <button class="button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
@@ -69,48 +67,53 @@
       <section class="benefits-section section">
         <div class="container">
           <h2 class="visually-hidden">Наши преимущества</h2>
-          <ul class="benefits-list list">
-            <li>
-              <div class="thumb">
+          <ul class="benefits-section__list list">
+            <li class="benefits-section__item">
+              <div class="benefits-section__thumb flex-centered">
                 <svg width="70" height="70">
                   <use href="./images/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3>Внимание к деталям</h3>
-              <p>
+              <h3 class="benefits-section__about">Внимание к деталям</h3>
+              <p class="benefits-section__description">
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
-            <li>
-              <div class="thumb">
+
+            <li class="benefits-section__item">
+              <div class="benefits-section__thumb flex-centered">
                 <svg width="70" height="70">
                   <use href="./images/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3>Пунктуальность</h3>
-              <p>
+              <h3 class="benefits-section__about">Пунктуальность</h3>
+              <p class="benefits-section__description">
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
-            <li>
-              <div class="thumb">
+
+            <li class="benefits-section__item">
+              <div class="benefits-section__thumb flex-centered">
                 <svg width="70" height="70">
                   <use href="./images/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3>Планирование</h3>
-              <p>
+              <h3 class="benefits-section__about">Планирование</h3>
+              <p class="benefits-section__description">
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
-            <li>
-              <div class="thumb">
+
+            <li class="benefits-section__item">
+              <div class="benefits-section__thumb flex-centered">
                 <svg width="70" height="70">
                   <use href="./images/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3>Современные технологии</h3>
-              <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+              <h3 class="benefits-section__about">Современные технологии</h3>
+              <p class="benefits-section__description">
+                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+              </p>
             </li>
           </ul>
         </div>
@@ -120,25 +123,25 @@
       <section class="work-section section">
         <div class="container">
           <h2 class="section-heading">Чем мы занимаемся</h2>
-          <ul class="work-list list">
-            <li>
-              <div class="thumb">
+          <ul class="work-section__list list">
+            <li class="work-section__item">
+              <div class="work-section__thumb">
                 <img width="370" height="294" src="./images/work1.jpg" alt="we are working" />
-                <h3 class="description">Десктопные приложения</h3>
+                <h3 class="work-section__description">Десктопные приложения</h3>
               </div>
             </li>
 
-            <li>
-              <div class="thumb">
+            <li class="work-section__item">
+              <div class="work-section__thumb">
                 <img width="370" height="294" src="./images/work2.jpg" alt="we are working" />
-                <h3 class="description">Мобильные приложения</h3>
+                <h3 class="work-section__description">Мобильные приложения</h3>
               </div>
             </li>
 
-            <li>
-              <div class="thumb">
+            <li class="work-section__item">
+              <div class="work-section__thumb">
                 <img width="370" height="294" src="./images/work3.jpg" alt="we are working" />
-                <h3 class="description">Дизайнерские решения</h3>
+                <h3 class="work-section__description">Дизайнерские решения</h3>
               </div>
             </li>
           </ul>
