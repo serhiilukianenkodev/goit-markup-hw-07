@@ -5,13 +5,9 @@
     background: $bg-section;
 }
 
-.footer .logo {
-    color: $text-white;
-    display: inline-block;
-    margin-bottom: 20px;
-}
 
-.address {
+
+.footer__address {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -19,16 +15,16 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-.address>a {
+.footer__link {
     display: block;
     margin-top: 9px;
 }
 
-.address p {
+.footer__our-location {
     color: $text-white;
 }
 
-.contact-us h2 {
+.footer__heading {
     margin-bottom: 20px;
 
     font-size: 14px;
@@ -39,50 +35,27 @@
     color: #ffffff;
 }
 
-.footer>.container {
+.footer__wrapper {
     display: flex;
     align-items: baseline;
 }
 
-.our-location {
+.footer__our-location {
     min-width: 232px;
     margin-right: 70px;
 }
 
-.contact-us a {
-    color: $text-white;
-    background: rgba(255, 255, 255, 0.1);
 
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-us a:hover,
-.contact-us a:focus {
-    background: $text-accent;
-}
-
-.contact-us {
+.footer__socials {
     margin-right: 93px;
 }
 
-.subscription h2 {
-    margin-bottom: 20px;
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-
-.subscription .form-field {
-    /* position: relative; */
+.subscription__field{
     display: inline-flex;
     align-items: stretch;
 }
 
-.subscription .input {
+.subscription__input {
     display: inline-block;
     min-width: 353px;
     height: 50px;
@@ -93,17 +66,17 @@
     border-radius: 4px;
 }
 
-.subscription .input:focus-within {
+.subscription__input:focus-within {
     outline: none;
 }
 
-.subscription .button {
+.subscription__button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-left: 12px;
 }
 
-.subscription .btn-icon {
+.subscription__btn-icon {
     margin-left: 10px;
 }

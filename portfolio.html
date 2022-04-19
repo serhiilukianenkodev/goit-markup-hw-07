@@ -258,61 +258,85 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer__wrapper">
         <div class="our-location">
-          <a class="logo" href="./index.html"><span class="logo-accent">Web</span>Studio</a>
-          <address class="address">
-            <p>г. Киев, пр-т Леси Украинки, 26</p>
-            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+          <a class="logo logo--footer" href="./index.html"
+            ><span class="logo__accent">Web</span>Studio</a
+          >
+          <address class="footer__address">
+            <p class="footer__our-location">г. Киев, пр-т Леси Украинки, 26</p>
+            <a class="link footer__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="link footer__link" href="tel:+380961111111">+38 096 111 11 11</a>
           </address>
         </div>
 
-        <div class="contact-us">
-          <h2>присоединяйтесь</h2>
-          <ul class="social-icons list">
-            <li>
-              <a href="" aria-label="instagram">
-                <svg class="icon" width="20" height="20">
+        <div class="footer__socials">
+          <h2 class="footer__heading">присоединяйтесь</h2>
+          <ul class="socials list">
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--footer flex-centered"
+                href=""
+                aria-label="instagram"
+              >
+                <svg class="socials__icon" width="20" height="20">
                   <use href="./images/sprite.svg#socials-instagram"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
-              <a href="" aria-label="twitter">
-                <svg class="icon" width="20" height="20">
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--footer flex-centered"
+                href=""
+                aria-label="twitter"
+              >
+                <svg class="socials__icon" width="20" height="20">
                   <use href="./images/sprite.svg#socials-twitter"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
-              <a href="" aria-label="facebook">
-                <svg class="icon" width="20" height="20">
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--footer flex-centered"
+                href=""
+                aria-label="facebook"
+              >
+                <svg class="socials__icon" width="20" height="20">
                   <use href="./images/sprite.svg#socials-facebook"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
-              <a href="" aria-label="linkedin">
-                <svg class="icon" width="20" height="20">
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--footer flex-centered"
+                href=""
+                aria-label="linkedin"
+              >
+                <svg class="socials__icon" width="20" height="20">
                   <use href="./images/sprite.svg#socials-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
+
         <form class="subscription">
-          <h2>Подпишитесь на рассылку</h2>
-          <div class="form-field">
-            <input type="email" name="email" id="email" class="input" placeholder="E-mail" />
-            <!-- <label for="email" class="label">E-mail</label> -->
+          <h2 class="footer__heading">Подпишитесь на рассылку</h2>
+          <div class="subscription__field">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="subscription__input"
+              placeholder="E-mail"
+            />
           </div>
-          <button class="button" type="submit">
+          <button class="button subscription__button" type="submit">
             Подписаться
-            <svg class="btn-icon" width="24" height="24">
+            <svg class="subscription__btn-icon" width="24" height="24">
               <use href="./images/sprite.svg#send"></use>
             </svg>
           </button>

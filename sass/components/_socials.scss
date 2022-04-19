@@ -27,3 +27,15 @@
 .socials__icon {
     fill: currentColor;
 }
+
+.socials__link--footer {
+    color: $text-white;
+    background: rgba(255, 255, 255, 0.1);
+
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials__link--footer:hover,
+.socials__link--footer:focus {
+    background: $text-accent;
+}
