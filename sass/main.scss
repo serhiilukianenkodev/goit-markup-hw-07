@@ -4,21 +4,27 @@
 @import './utils/list';
 @import './utils/visually-hidden';
 
-@import './components/container';
-@import './components/header';
-@import './components/logo';
+// 
 @import './components/button';
+@import './components/container';
+@import './components/logo';
+@import './components/socials';
+// 
+@import './components/header';
 
+// main index
 @import './components/hero';
 @import './components/benefits-section';
 @import './components/work-section';
 @import './components/team-section';
 @import './components/clients-section';
 
+// portfolio
 @import './components/portfolio';
 
-@import './components/socials';
+// footer
 @import './components/footer';
 
+// modal
 @import './components/backdrop';
 @import './components/modal';

@@ -23,10 +23,13 @@
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-.modal .close-btn {
+.modal__close-btn{
     position: absolute;
     top: 8px;
     right: 8px;
+}
+
+.close-btn {
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -39,20 +42,18 @@
     padding: 0;
 }
 
-.close-btn svg {
+.close-btn__icon {
     fill: currentColor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .close-btn:focus &,
+    .close-btn:hover & {color: $text-accent;}
 }
 
-.close-btn:focus svg,
-.close-btn:hover svg {
-    color: $text-accent;
-}
 
 
-.form-feedback h2 {
+.form-feedback__heading {
     margin-bottom: 12px;
-
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -63,7 +64,7 @@
 
 }
 
-.form-label {
+.form-feedback__label {
     margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.17;
@@ -71,29 +72,30 @@
     cursor: pointer;
 }
 
-.form-input {
+.form-feedback__input {
     padding: 11px 11px 11px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+
+    &:focus {
+        border: 1px solid $text-accent;
+        outline: none;
+    }
 }
 
 
-.form-input:focus {
-    border: 1px solid $text-accent;
-    outline: none;
-}
 
-.form-icon {
+.form-feedback__icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus-within~.form-icon {
+.form-feedback__input:focus-within ~ .form-feedback__icon {
     fill: $text-accent;
 }
 
-.formfield {
+.form-feedback__formfield {
     position: relative;
     margin-bottom: 10px;
     display: flex;
@@ -102,23 +104,23 @@
 
 
 
-.formfield .form-icon {
+.form-feedback__icon {
     position: absolute;
     left: 14px;
     top: 50%;
 
 }
 
-.formfield textarea {
+.form-feedback__textarea {
     padding: 12px 16px;
     min-height: 120px;
 }
 
-.formfield textarea::placeholder {
+.form-feedback__textarea::placeholder {
     color: rgba(117, 117, 117, 0.5);
 }
 
-textarea {
+.form-feedback__textarea {
     resize: none;
 }
 
@@ -131,14 +133,16 @@ textarea {
     align-items: center;
 }
 
-.policy .form-label {
+.policy__label {
+    padding-left: 26px;
     margin-bottom: 0;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    cursor: pointer;
 }
 
-.policy .checkbox {
+.policy__checkbox {
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -150,30 +154,26 @@ textarea {
     overflow: hidden;
 }
 
-.policy {
-    position: relative;
-}
-
-.policy .checkbox:checked~.unchecked {
+.policy__checkbox:checked~.policy__unchecked {
     opacity: 0;
 }
 
-.policy .checkbox:checked~.checked {
+.policy__checkbox:checked~.policy__checked {
     opacity: 1;
 }
 
-.policy .checked {
+.policy__checked {
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy .unchecked {
+.policy__unchecked {
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy .checked,
-.policy .unchecked {
+.policy__checked,
+.policy__unchecked {
     position: absolute;
     left: 12px;
     top: 50%;
@@ -182,11 +182,7 @@ textarea {
     pointer-events: none;
 }
 
-.policy .form-label {
-    padding-left: 26px;
-}
-
-.form-feedback .button {
+.form-feedback__button {
     display: block;
     margin-top: 30px;
     margin-left: auto;
