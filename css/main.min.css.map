@@ -6,7 +6,7 @@
         "../sass/base/_normalize.scss",
         "../sass/utils/_variables.scss",
         "../sass/base/_preset.scss",
-        "../sass/utils/_list.scss",
+        "../sass/base/_list.scss",
         "../sass/utils/_visually-hidden.scss",
         "../sass/components/_button.scss",
         "../sass/components/_container.scss",
